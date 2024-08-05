@@ -1,0 +1,5 @@
+rx->rx1,rx2,8
+bx->bx1,bx2,8
+gx->gx1,gx2,8
+oy->oy.1,oy.2,32
+ox->ox.1,ox.2,8

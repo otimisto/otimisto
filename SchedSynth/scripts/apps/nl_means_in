@@ -1,0 +1,22 @@
+def non_local_means:
+  for n_x:
+    for n_y:
+      for n_c:
+        compute
+def non_local_means_sum:
+  for s_x:
+    for s_y:
+      for s_c:
+        compute
+def blur_d:
+  for b_x:
+    for b_y:
+	  for bd_x:
+	    for bd_y:
+		  compute
+def blur_d_y:
+  for by_x:
+    for by_y:
+	  for by_dx:
+	    for by_dy:
+		  compute

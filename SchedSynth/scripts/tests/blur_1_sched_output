@@ -1,0 +1,4 @@
+consumer.split(y, yo, yi, 19);
+producer.split(x, xo, xi, 4);
+producer.store_at(consumer, yo);
+producer.vectorize(xi);

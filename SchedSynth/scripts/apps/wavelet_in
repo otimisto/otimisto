@@ -1,0 +1,9 @@
+def daubechies_x:
+  for x:
+    for y:
+      compute
+
+def haar_x:
+  for x:
+    for y:
+      compute

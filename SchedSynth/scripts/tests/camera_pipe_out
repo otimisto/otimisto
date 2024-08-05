@@ -1,0 +1,4 @@
+consumer.reorder(c, y);
+consumer.reorder(c, x);
+consumer.compute_root();
+consumer.vectorize(x);

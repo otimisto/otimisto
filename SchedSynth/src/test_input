@@ -1,0 +1,9 @@
+def producer:
+  for a:
+    for b:
+      compute
+def consumer:
+  for z:
+    for y (fuse a):
+      for x:
+        compute

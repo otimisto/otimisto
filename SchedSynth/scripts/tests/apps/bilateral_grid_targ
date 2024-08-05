@@ -1,0 +1,23 @@
+produce blurx:
+  parallel y:
+    produce blurz:
+      produce histogram:
+        for c:
+          for z:
+            for x:
+              histogram(...) = ...
+        for c:
+          for x:
+            histogram(...) = ...
+      consume histogram:
+        for x.x:
+          vectorized x.v0 in [0, 7]:
+            for z:
+              unrolled c:
+                blurz(...) = ...
+    consume blurz:
+      for z:
+        for x.x:
+          vectorized x.v1 in [0, 7]:
+            unrolled c:
+              blurx(...) = ...

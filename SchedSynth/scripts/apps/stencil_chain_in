@@ -1,0 +1,8 @@
+def out:
+  for x:
+    for y:
+	  compute
+def si:
+  for a:
+    for b:
+	  compute

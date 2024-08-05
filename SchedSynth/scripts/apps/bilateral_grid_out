@@ -1,0 +1,44 @@
+def blurz:
+  for bz_y:
+    compute histogram
+    for bz_x.1:
+      vectorized bz_x.2:
+        for bz_z:
+          unrolled bz_c, 8:
+            compute
+def histogram:
+  for h_c:
+    for h_z:
+      for h_y:
+        for h_x:
+          compute
+def histogram.update(2):
+  for h1_y:
+    for h1_x:
+      for h1_r10.1:
+        for h1_r10.2:
+          unrolled h1_c, 8:
+            compute
+def blurx:
+  parallel bx_y:
+    compute blurz
+    for bx_z:
+      for bx_x.1:
+        vectorized bx_x.2:
+          unrolled bx_c, 8:
+            compute
+def blury:
+  parallel by_y:
+    compute blurz
+    for by_z:
+      for by_x.1:
+        vectorized by_x.2:
+          unrolled by_c, 8:
+            compute
+def bilateral_grid:
+  parallel bg_y.1:
+    compute blury
+    for bg_y.2:
+      for bg_x.1:
+        vectorized bg_x.2:
+          compute

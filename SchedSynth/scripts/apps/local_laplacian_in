@@ -1,0 +1,100 @@
+produce f0:
+  for v0:
+    f0(...) = ...
+produce f2:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f4:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f5:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f72:
+  for v0:
+    for v1:
+     f2(...) = ...
+        consume f72:
+produce f6:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f73:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f7:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f74:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f8:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f75:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f9:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f76:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f10:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f77:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f78:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f132:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f131:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f130:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce output:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f129:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f128:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f127:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f126:
+  for v0:
+    for v1:
+     f2(...) = ...
+produce f125:
+  for v0:
+    for v1:
+     f2(...) = ...

@@ -1,0 +1,16 @@
+def output:
+  for yo:
+    for xo:
+      compute
+def gray:
+  for yg:
+    for xg:
+      compute
+def Ix:
+  for yx:
+    for xx:
+      compute
+def Iy:
+  for yy:
+    for xy:
+      compute

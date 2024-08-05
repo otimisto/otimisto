@@ -1,0 +1,9 @@
+def producer:
+  for ??:
+    vectorized xi in [0, 3]:
+      compute
+def consumer:
+  ??:
+    alloc producer
+    for yi in [0, 15]:
+      ??

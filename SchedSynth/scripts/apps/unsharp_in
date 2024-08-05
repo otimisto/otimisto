@@ -1,0 +1,17 @@
+def gray:
+  for gy:
+    for gx:
+      compute
+def blur_y:
+  for by:
+    for bx:
+      compute
+def ratio:
+  for ry:
+    for rx:
+      compute
+def output:
+  for oc:
+    for oy:
+      for ox:
+        compute

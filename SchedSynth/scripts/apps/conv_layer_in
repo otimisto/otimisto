@@ -1,0 +1,33 @@
+def input_im_global_wrapper:
+  for i_3:
+    for i_2:
+      for i_1:
+        for i_0:
+          compute
+def filter_im_global_wrapper:
+  for f_3:
+    for f_2:
+      for f_1:
+        for f_0:
+          compute
+def conv:
+  for n_conv:
+    for y_conv:
+      for x_conv:
+        for c_conv:
+          compute
+def conv.update:
+  for n_conv_up:
+    for y_conv_up:
+      for x_conv_up:
+        for c_conv_up:
+          for r13_1 in [0, 2]:
+            for r13_2 in [0, 2]:
+              for r13_3 in [0, 127]:
+                compute
+def relu:
+  for n_relu in [0, 4]:
+    for y_relu in [0, 79]:
+      for x_relu in [0, 99]:
+        for c_relu in [0, 127]:
+          compute

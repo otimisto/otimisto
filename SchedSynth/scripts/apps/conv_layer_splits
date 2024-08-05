@@ -1,0 +1,7 @@
+f_0->f_0.1,f_0.2,16
+c_conv->c_conv.1,c_conv.2,16
+c_conv_up->c_conv_up.1,c_conv_up.2,16
+r13_3->r13_3.2,r13_3.1,2
+c_relu->c_relu.1,c_relu.2,64
+c_relu.2->c_relu.2.1,c_relu.2.1,16
+x_relu->x_relu.1,x_relu.2,5

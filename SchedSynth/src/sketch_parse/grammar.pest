@@ -1,0 +1,63 @@
+alpha = { 'a'..'z' | 'A'..'Z' | "." | "_" | "(" | ")" }
+digit = { '0'..'9' }
+colon = { ":" }
+
+number = { digit+ }
+number_or_hole = { "??" | "<" ~ number_set_hole ~ ">" | number }
+number_set_hole = { ident }
+range = { whitespace_plus ~ "in" ~ whitespace_star ~ "[" ~ number_or_hole ~ whitespace_star ~ "," ~ whitespace_star ~ number_or_hole ~ whitespace_star ~ "]" }
+stride = { "(" ~ whitespace_star ~ "stride:" ~ whitespace_star ~ number_or_hole ~ whitespace_star ~ ")" }
+fuse = { whitespace_plus ~ "(" ~ whitespace_star ~ "fuse" ~ whitespace_plus ~ ident_list ~ whitespace_star ~ ")" ~ whitespace_star }
+
+ident = { (alpha | digit) + }
+ident_or_hole = { ident | "??" }
+ident_list = { ident | ident ~ whitespace_star ~ "," ~ whitespace_star ~ ident_list }
+ident_list_spaces = { ident ~ whitespace_plus ~ ident_list_spaces | ident}
+newline = { whitespace* ~ "\n"}
+
+indent = { "  " }
+
+indent_nest = { indent* }
+
+optional_range = { (range)? }
+optional_stride = { (whitespace_plus ~ stride)? }
+optional_fuse = { (fuse)? }
+
+produce = { "def" ~ whitespace_plus ~ ident_or_hole ~ colon }
+consume = { "compute" ~ whitespace_plus ~ ident_or_hole }
+pfor = {"for" ~ whitespace_plus ~ ident_or_hole ~ optional_range ~ optional_fuse ~ colon }
+vectorize = { "vectorized" ~ whitespace_plus ~ ident_or_hole ~ optional_range ~ optional_fuse ~ colon }
+parallel = { "parallel" ~ whitespace_plus ~ ident_or_hole ~ optional_range ~ optional_fuse ~ colon }
+assignment = { "compute" | "??" }
+store_at = { "alloc" ~ whitespace_plus ~ ident_or_hole }
+unroll = { "unrolled" ~ whitespace_plus ~ ident_or_hole ~ optional_range ~ whitespace_plus ~ number_or_hole ~ whitespace_star ~ optional_fuse ~ colon}
+prefetch = { "prefetch" ~ whitespace_plus ~ ident ~ whitespace_plus ~ "at" ~ whitespace_plus ~ ident_or_hole ~ optional_stride }
+structure_hole = { "??" ~ whitespace_star ~ colon }
+ordering = { "storage order" ~ whitespace_plus ~ ident_list_spaces }
+simple_property = { "memoize" | "allow race conditions" | "async" }
+
+whitespace = { " " | "\t" }
+whitespace_plus = { whitespace+ }
+whitespace_star = { whitespace* }
+whitespace_or_newline = { whitespace | newline }
+whitespace_or_newlines = { whitespace_or_newline* }
+
+sequence_list = {
+  sequence ~ newline ~ sequence_list
+  | sequence ~ whitespace_or_newlines ~ EOI
+}
+sequence =
+  { 
+  indent_nest ~ produce
+  | indent_nest ~ structure_hole
+  | indent_nest ~ consume
+  | indent_nest ~ pfor
+  | indent_nest ~ store_at
+  | indent_nest ~ assignment
+  | indent_nest ~ ordering
+  | indent_nest ~ simple_property
+  | indent_nest ~ vectorize
+  | indent_nest ~ unroll
+  | indent_nest ~ prefetch
+  | indent_nest ~ parallel 
+  | indent_nest }

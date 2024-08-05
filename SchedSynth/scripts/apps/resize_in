@@ -1,0 +1,37 @@
+def unnormalized_kernel_x:                      
+  for k:
+    for x:
+      compute
+def kernel_sum_x:
+  for x:
+    compute
+def kernel_x:
+  for k:
+    for x:
+      compute
+def unnormalized_kernel_y:
+  for k:
+    for y:
+      compute
+def kernel_sum_y:
+  for y:
+    compute
+def kernel_y:
+  for k:
+    for y:
+      compute
+def resized_x:
+  for c:
+    for y:
+	  for x:
+	    compute
+def resized_y:
+  for c:
+    for y:
+	  for x:
+	    compute
+def output:
+  for oc:
+    for oy:
+      for ox:
+        compute

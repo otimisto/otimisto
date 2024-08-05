@@ -1,0 +1,7 @@
+def producer:
+  for x:
+    compute
+def consumer:
+  for y:
+    for z:
+      compute

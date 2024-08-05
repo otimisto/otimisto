@@ -1,0 +1,8 @@
+def blur_x:
+  for xy:
+    for xx:
+      compute
+def blur_y:
+  for yy:
+    for yx:
+      compute

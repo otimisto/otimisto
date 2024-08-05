@@ -1,0 +1,159 @@
+produce f0:
+  for v0:
+    f0(...) = ...
+consume f0:
+  produce f2:
+    parallel v1.v1:
+      for v1.v6 in [0, 31]:
+        for v0.v0:
+          vectorized v0.v7 in [0, 7]:
+            f2(...) = ...
+  consume f2:
+    produce f4:
+      parallel v1.v1:
+        for v1.v10 in [0, 7]:
+          for v3:
+            for v0.v0:
+              vectorized v0.v11 in [0, 7]:
+                f4(...) = ...
+    consume f4:
+      produce f5:
+        parallel v1.v1:
+          for v1.v15 in [0, 7]:
+            for v3:
+              for v0.v0:
+                vectorized v0.v16 in [0, 7]:
+                  f5(...) = ...
+      consume f5:
+        produce f72:
+          parallel v1.v1:
+            for v1.v8 in [0, 31]:
+              for v0.v0:
+                vectorized v0.v9 in [0, 7]:
+                  f72(...) = ...
+        consume f72:
+          produce f6:
+            parallel v1.v1:
+              for v1.v20 in [0, 7]:
+                for v3:
+                  for v0.v0:
+                    vectorized v0.v21 in [0, 7]:
+                      f6(...) = ...
+          consume f6:
+            produce f73:
+              parallel v1.v1:
+                for v1.v13 in [0, 31]:
+                  for v0.v0:
+                    vectorized v0.v14 in [0, 7]:
+                      f73(...) = ...
+            consume f73:
+              produce f7:
+                parallel v1.v1:
+                  for v1.v25 in [0, 7]:
+                    for v3:
+                      for v0.v0:
+                        vectorized v0.v26 in [0, 7]:
+                          f7(...) = ...
+              consume f7:
+                produce f74:
+                  parallel v1.v1:
+                    for v1.v18 in [0, 31]:
+                      for v0.v0:
+                        vectorized v0.v19 in [0, 7]:
+                          f74(...) = ...
+                consume f74:
+                  produce f8:
+                    parallel v3:
+                      for v1:
+                        for v0:
+                          f8(...) = ...
+                  consume f8:
+                    produce f75:
+                      parallel v1.v1:
+                        for v1.v23 in [0, 31]:
+                          for v0.v0:
+                            vectorized v0.v24 in [0, 7]:
+                              f75(...) = ...
+                    consume f75:
+                      produce f9:
+                        parallel v3:
+                          for v1:
+                            for v0:
+                              f9(...) = ...
+                      consume f9:
+                        produce f76:
+                          for v1:
+                            for v0:
+                              f76(...) = ...
+                        consume f76:
+                          produce f10:
+                            parallel v3:
+                              for v1:
+                                for v0:
+                                  f10(...) = ...
+                          consume f10:
+                            produce f77:
+                              for v1:
+                                for v0:
+                                  f77(...) = ...
+                            consume f77:
+                              produce f78:
+                                for v1:
+                                  for v0:
+                                    f78(...) = ...
+                              consume f78:
+                                produce f132:
+                                  for v1:
+                                    for v0:
+                                      f132(...) = ...
+                                consume f132:
+                                  produce f131:
+                                    for v1:
+                                      for v0:
+                                        f131(...) = ...
+                                  consume f131:
+                                    produce f130:
+                                      for v1:
+                                        for v0:
+                                          f130(...) = ...
+                                    consume f130:
+                                      produce output:
+                                        parallel v1.v4:
+                                          store f129:
+                                            store f128:
+                                              store f127:
+                                                store f126:
+                                                  for v1.v1 in [0, 63]:
+                                                    produce f129:
+                                                      for v1:
+                                                        for v0.v0:
+                                                          vectorized v0.v27 in [0, 7]:
+                                                            f129(...) = ...
+                                                    consume f129:
+                                                      produce f128:
+                                                        for v1:
+                                                          for v0.v0:
+                                                            vectorized v0.v22 in [0, 7]:
+                                                              f128(...) = ...
+                                                      consume f128:
+                                                        produce f127:
+                                                          for v1:
+                                                            for v0.v0:
+                                                              vectorized v0.v17 in [0, 7]:
+                                                                f127(...) = ...
+                                                        consume f127:
+                                                          produce f126:
+                                                            for v1:
+                                                              for v0.v0:
+                                                                vectorized v0.v12 in [0, 7]:
+                                                                  f126(...) = ...
+                                                          consume f126:
+                                                            produce f125:
+                                                              for v0.v0:
+                                                                vectorized v0.v28 in [0, 7]:
+                                                                  f125(...) = ...
+                                                            consume f125:
+                                                              for v0.v0:
+                                                                vectorized v0.v5 in [0, 7]:
+                                                                  for v2:
+                                                                    output(...) = ...

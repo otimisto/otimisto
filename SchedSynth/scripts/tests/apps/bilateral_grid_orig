@@ -1,0 +1,13 @@
+produce blurx:
+  for c:                
+    for z:      
+      for y:
+        for x:    
+          produce histogram:
+            for z:
+              for x:
+                histogram(...) = ...
+            for x:
+              histogram(...) = ...
+          consume histogram:
+            blurx(...) = ...

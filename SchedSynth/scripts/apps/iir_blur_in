@@ -1,0 +1,20 @@
+def transpose:      
+  for v2:                                           
+    for v1:                                         
+      for v0:            
+        compute blur                               
+        compute
+def blur.update(0):
+  for v2:                                           
+    for v0:                                         
+      compute
+def blur.update(1):
+  for v2:                                           
+    for v0:          
+      for r12:                                      
+        compute
+def blur.update(2):
+  for v2:                                           
+    for v0:                                         
+      for r12:                                      
+        compute

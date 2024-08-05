@@ -1,0 +1,11 @@
+def out:
+  parallel t:
+    REPEAT(11, alloc si)
+	for yi:
+	  REPEAT(11, compute si)
+      vectorize xi:
+	    compute
+
+def si:
+  vectorized a:
+    for b:

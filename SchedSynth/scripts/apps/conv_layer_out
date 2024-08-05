@@ -1,0 +1,40 @@
+def input_im_global_wrapper:
+  ??:
+    unrolled i_0 4:
+      compute
+def filter_im_global_wrapper:
+  unrolled f_3 2:
+    ??:
+      unrolled f_0.1 2:
+        vectorized f_0.2 in [0, 15]:
+          compute
+def conv:
+  for n_conv:
+    unrolled y_conv 2:
+      unrolled x_conv 2:
+        unrolled c_conv.1 2:
+          vectorized c_conv.2 in [0, 15]:
+            compute
+def conv.update():
+  for n_conv_up:
+    for r13_1 in [0, 2]:
+      for r13_2 in [0, 2]:
+        for r13_3.2 in [0, 63]:
+          compute filter_im_global_wrapper
+          unrolled r13_3.1 2:
+            unrolled y_conv_up 2:
+              unrolled x_conv_up 2:
+                compute input_im_global_wrapper
+                unrolled c_conv_up.1 2:
+                  vectorized c_conv_up.2 in [0, 15]:
+                    compute
+def relu:
+  parallel c_relu.1 in [0, 1]:
+    parallel n_relu in [0, 4]:
+      parallel y_relu in [0, 79]:
+        for x_relu.1 in [0, 19]:
+          compute conv
+          unrolled x_relu.2 5:
+            unrolled c_relu.2.1 4:
+              vectorized c_relu.2.1 in [0, 15]:
+                compute

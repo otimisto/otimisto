@@ -1,0 +1,8 @@
+prod.1:
+  for x:
+    store cons
+	parallel
+    for a:
+      produce cons
+      for y in [0..15]:
+        prod.1 = _

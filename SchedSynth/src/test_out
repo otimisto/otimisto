@@ -1,0 +1,12 @@
+def producer:
+  for a:
+    for b:
+      compute
+def consumer:
+  for x:
+    alloc producer
+    for y:
+      compute producer
+      for z:
+        prefetch buf at x
+        compute

@@ -1,0 +1,13 @@
+def blur_x:
+  for xy:
+    for xx.1:
+      vectorized xx.2 in [0, 15]:
+        compute
+def blur_y:
+  parallel yy.1:
+    alloc blur_x
+    for yy.2:
+      for yx.1:
+        compute blur_x
+        vectorized yx.2 in [0, 15]:
+          compute

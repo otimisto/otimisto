@@ -1,0 +1,35 @@
+def blurz:
+  for bz_c:
+    for bz_z:
+      for bz_y:
+        for bz_x:
+          compute
+def histogram:
+  for h_c:
+    for h_z:
+      for h_y:
+        for h_x:
+          compute
+def histogram.update(1):
+  for h1_c:
+    for h1_y:
+      for h1_x:
+        for h1_r10.1:
+          for h1_r10.2:
+            compute
+def blurx:
+  for bx_c:
+    for bx_z:
+      for bx_y:
+        for bx_x:
+          compute
+def blury:
+  for by_c:
+    for by_z:
+      for by_y:
+        for by_x:
+          compute
+def bilateral_grid:
+  for bg_y:
+    for bg_x:
+      compute

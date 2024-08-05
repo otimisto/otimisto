@@ -1,0 +1,32 @@
+def non_local_means:
+  for n_c:
+	parallel n_ty:
+      for n_tx:
+	    compute blur_d_y
+        for n_y1:
+          vectorize n_x1:
+		    compute non_local_means_sum
+            compute
+def non_local_means_sum:
+  unroll s_c:
+    vectorize s_x:
+	  compute blur_d
+      for s_y:
+        compute
+def non_local_means_sum.update(0):
+  unroll s_c0:
+    vectorized s_x0:
+	  for s_y0:
+	    compute
+def blur_d:
+  vectorized b_x:
+    for b_y:
+	  for bd_x:
+	    for bd_y:
+		  compute
+def blur_d_y:
+  for by_y:
+    vectorized by_x:
+	  for by_dx:
+	    for by_dy:
+		  compute

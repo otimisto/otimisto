@@ -1,0 +1,9 @@
+produce relu:                                       
+  for n:                                            
+    for y:                                          
+      for x:                                        
+        for c:                                      
+          produce conv:                             
+            conv(...) = ...                         
+          consume conv:
+            relu(...) = ...

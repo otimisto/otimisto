@@ -1,0 +1,4 @@
+for x:
+  for y:
+    REPEAT 10: for z{}:
+      compute

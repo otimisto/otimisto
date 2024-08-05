@@ -1,0 +1,6 @@
+def consumer:
+  prefetch buffer, 2
+  unrolled y 4:
+    vectorized x:
+      unrolled c 4:
+        compute

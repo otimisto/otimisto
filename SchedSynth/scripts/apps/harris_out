@@ -1,0 +1,22 @@
+def output:
+  parallel yo1:
+    alloc gray
+	alloc Iy
+	alloc Ix
+	for yo2:
+	  compute gray
+	  compute Iy
+def gray:
+  for xg1:
+    vectorized xg2:
+	  compute
+def Iy:
+  for yx:
+    for yy:
+      compute
+def Ix:
+  compute Iy
+  for xx1 (fuse yx):
+    vectorized xx2 (fuse yx):
+      for yx:
+        compute

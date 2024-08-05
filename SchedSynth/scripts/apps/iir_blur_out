@@ -1,0 +1,22 @@
+def transpose:      
+  parallel c:
+    parallel y0:
+	  compute blur
+      for x0:
+	    for y1:
+	      vectorized x1:
+            compute
+def blur.update(0):
+  for by:
+    for bx:
+      compute
+def blur.update(1):
+  for by1:
+    for br1:
+      vectorized bx1:
+        compute
+def blur.update(2):
+  for by2:
+    for br2:
+      vectorized bx2:
+        compute
